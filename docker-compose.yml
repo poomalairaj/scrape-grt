@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+    grt:
+        build: .
+        image: grt
+        working_dir: /grt
+        command: ['python', 'scrape_grt.py']
+        volumes:
+            - .:/grt
+    plot:
+        build: .
+        image: grt
+        working_dir: /grt
+        command: ['python', 'plot.py']
+        volumes:
+            - .:/grt
